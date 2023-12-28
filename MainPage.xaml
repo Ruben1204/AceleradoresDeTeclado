@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AceleradoresDeTeclado.MainPage">
+
+    <ContentPage.MenuBarItems>
+        
+        <MenuBarItem Text="Editar">
+            
+            <MenuFlyoutItem Text="Cortar"
+                            Clicked="MenuFlyoutItem_Clicked">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Ctrl" Key="X"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+
+            <MenuFlyoutItem Text="Refrescar"
+                            Clicked="MenuFlyoutItem_Clicked_1">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Shift,Ctrl" Key="R"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+
+            <MenuFlyoutItem Text="Copiar"
+                            Clicked="MenuFlyoutItem_Clicked_2">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="{OnPlatform MacCatalyst=Cmd, WinUI=Ctrl}" Key="{OnPlatform MacCatalyst=T, WinUI=C}"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+
+            <MenuFlyoutItem Text="Pegar"
+                Clicked="MenuFlyoutItem_Clicked_3">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="None" Key="{OnPlatform MacCatalyst=UIKeyInputF1, WinUI=F1}"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+</ContentPage>
